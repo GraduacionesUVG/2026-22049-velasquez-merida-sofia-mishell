@@ -1,0 +1,30 @@
+[project]
+name = "pattern-analysis-mcp"
+version = "0.1.0"
+description = "MCP de analisis de patrones y arquetipos para deteccion de phishing"
+readme = "README.md"
+authors = [
+    { name = "Sofiamishel2003", email = "sofiamishel2003@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=2.0.0",
+    "sentence-transformers>=3.0.0",
+    "scikit-learn>=1.6.0",
+    "pandas>=2.0.0",
+    "numpy>=1.26.0,<2.0.0",
+    "matplotlib>=3.8.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "jupyter>=1.0.0",
+]
+
+[project.scripts]
+pattern-analysis-mcp = "pattern_analysis_mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"

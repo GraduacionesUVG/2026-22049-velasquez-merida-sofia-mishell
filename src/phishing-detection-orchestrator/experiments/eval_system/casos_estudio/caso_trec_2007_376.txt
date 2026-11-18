@@ -1,0 +1,171 @@
+{
+  "modo": "explicacion",
+  "modelo_orquestador": "claude-haiku-4-5",
+  "servidores_habilitados": [
+    "archetype",
+    "knowledge",
+    "virustotal",
+    "coherence"
+  ],
+  "servidores_conectados": [
+    {
+      "server_id": "archetype",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "knowledge",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "virustotal",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "coherence",
+      "connected": true,
+      "detail": null
+    }
+  ],
+  "herramientas_invocadas": [
+    {
+      "servidor": "archetype",
+      "herramienta": "classify_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "coherence",
+      "herramienta": "analyze_coherence",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "match_reference_phrases",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'1.foto'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'2.foto'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'3.billing'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'4.materai'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'5.foto'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'2.slip'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'3.materai'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": false,
+      "error": "Tool 'get_domain_report' execution failed: VirusTotal API error: Domain \"b'4.foto'\" is not a valid domain pattern"
+    },
+    {
+      "servidor": "archetype",
+      "herramienta": "get_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "explain_concepts",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "resultado": {
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.85,
+    "senales": [
+      {
+        "servidor": "coherence",
+        "descripcion": "Incoherencia crítica entre remitente y contenido: el correo afirma ser de HSBC (banco internacional importante) pero utiliza una dirección de correo informal de Yahoo y números de móvil personales como canales de contacto, sin información oficial de HSBC ni formato institucional.",
+        "evidencia": "Contacto: 'email: mypersonalloans@yahoo.co.id' y 'PRAST 021-68956791,081311326916' en lugar de canales oficiales de HSBC"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Incoherencia entre autoridad y ejecución: el correo se presenta como oferta oficial de HSBC ('Resmi, Terpercaya') pero está escrito completamente en indonesio informal con abreviaturas ('s/d', 'hr krj', 'dgn', 'bh'), puntuación deficiente y formato casual completamente inconsistente con comunicaciones bancarias institucionales.",
+        "evidencia": "Texto: 'Resmi, Terpercaya & Bebas Succes fee...!!! KEMUDAHAN 1. Tanpa Jaminan 2. Bunga Kompetitif, jangka waktu pinjaman 1,2 atau 3 tahun'"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Incoherencia crítica en solicitud de documentos: el correo solicita fotocopias de documentos sensibles (ID, tarjetas de crédito, extractos bancarios originales) a través de canales informales de reenvío masivo, algo que ningún banco legítimo haría.",
+        "evidencia": "Solicitud: 'Dokumen yg diperlukan: 1.foto copy ktp 2.foto copy kartu kredit* 3.billing statement 1 bulan terakhir asli' combinado con 'Mohon Diforward EMAIL ini jika anda tidak membutuhkannya kepada teman-teman kantor'"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Puntuación de coherencia muy baja (0.25/1.0) indicando múltiples fallos internos graves típicos de phishing o solicitud fraudulenta.",
+        "evidencia": "Análisis de coherencia: coherence_score = 0.25"
+      },
+      {
+        "servidor": "archetype",
+        "descripcion": "El correo coincide con el arquetipo 10 de phishing: 'Spam de hipotecas y prestamos preaprobados', que agrupa 916 muestras de ataques de phishing con similitud de 0.52. El arquetipo identifica la emoción dominante como 'codicia' y la táctica de ingeniería social como 'escasez'.",
+        "evidencia": "Clasificación de arquetipo: archetype_id=10, similarity=0.5232, label='Spam de hipotecas y prestamos preaprobados', dominant_emotion='codicia', tactic='escasez'"
+      },
+      {
+        "servidor": "archetype",
+        "descripcion": "El correo exhibe características típicas del arquetipo de préstamos preaprobados: promesas de aprobación rápida, tasas competitivas, proceso simplificado, y solicitud de documentos personales sensibles.",
+        "evidencia": "Frases características del arquetipo: 'Proses 7 s/d 14 hr krj', 'Bunga Kompetitif', 'Dana Langsung ditransfer ke rekening pribadi anda', 'Dokumen yg diperlukan: foto copy ktp, foto copy kartu kredit, billing statement'"
+      },
+      {
+        "servidor": "virustotal",
+        "descripcion": "El dominio yahoo.co.id (utilizado en la dirección de correo mypersonalloans@yahoo.co.id) es un dominio legítimo de Yahoo, pero su uso para suplantación de HSBC es un indicador de phishing. Los dominios numéricos detectados (1.foto, 2.foto, 3.billing, 4.materai, 5.foto, 2.slip, 3.materai, 4.foto) no son dominios válidos en VirusTotal, lo que sugiere posibles intentos de ofuscación o dominios malformados.",
+        "evidencia": "Dominio de contacto: mypersonalloans@yahoo.co.id (Yahoo legítimo pero usado para suplantación); dominios detectados como inválidos: 1.foto, 2.foto, 3.billing, 4.materai, 5.foto, 2.slip, 3.materai, 4.foto"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Solicitud de reenvío masivo ('Mohon Diforward EMAIL ini jika anda tidak membutuhkannya kepada teman-teman kantor, teman dekat atau saudara anda') es táctica típica de spam y phishing en cadena para amplificar el alcance del ataque.",
+        "evidencia": "Texto literal: 'Mohon Diforward EMAIL ini jika anda tidak membutuhkannya kepada teman-teman kantor, teman dekat atau saudara anda barangkali ada yang membutuhkannya'"
+      }
+    ],
+    "explicacion": "Este correo presenta múltiples indicadores convergentes de phishing y fraude. El análisis de coherencia detecta tres incoherencias críticas graves: (1) el correo afirma ser de HSBC pero utiliza una dirección de correo informal de Yahoo (mypersonalloans@yahoo.co.id) y números de móvil personales en lugar de canales oficiales de HSBC; (2) se presenta como comunicación oficial ('Resmi, Terpercaya') pero está escrito en indonesio informal con abreviaturas y puntuación deficiente, completamente inconsistente con estándares bancarios; (3) solicita documentos sensibles (fotocopias de ID, tarjetas de crédito, extractos bancarios originales) a través de canales informales de reenvío masivo, algo que ningún banco legítimo haría. La puntuación de coherencia resultante es muy baja (0.25/1.0).\n\nEl análisis de arquetipos clasifica el correo dentro del patrón conocido de phishing 'Spam de hipotecas y prestamos preaprobados' (arquetipo 10, con 916 muestras de entrenamiento), con similitud de 0.52. Este arquetipo identifica la emoción dominante explotada como 'codicia' (promesas de préstamos fáciles y rápidos) y la táctica de ingeniería social como 'escasez' (proceso rápido de 7-14 días, aprobación garantizada). El correo exhibe todas las características típicas: promesas de aprobación rápida, tasas competitivas, proceso simplificado, y solicitud de documentos personales.\n\nTécnicamente, el dominio yahoo.co.id es legítimo, pero su uso para suplantación de HSBC es un indicador de phishing. Los dominios numéricos detectados (1.foto, 2.foto, 3.billing, 4.materai, etc.) no son dominios válidos, sugiriendo posibles intentos de ofuscación.\n\nFinalmente, la solicitud explícita de reenvío masivo ('Mohon Diforward EMAIL ini...kepada teman-teman kantor, teman dekat o saudara') es una táctica típica de spam y phishing en cadena para amplificar el alcance del ataque.\n\nLa convergencia de incoherencias graves, coincidencia con patrón de phishing conocido, y tácticas de distribución masiva hacen que este correo sea claramente phishing con alto nivel de confianza."
+  }
+}

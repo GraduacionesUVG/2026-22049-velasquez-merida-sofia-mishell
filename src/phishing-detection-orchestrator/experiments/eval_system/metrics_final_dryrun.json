@@ -1,0 +1,31 @@
+{
+  "timestamp_inicio": "2026-09-17T21:55:26.802659+00:00",
+  "timestamp_fin": "2026-09-17T21:55:27.116948+00:00",
+  "tiempo_total_segundos": 0.3,
+  "git_commit_hash": "3a931133ae65e30b6226bf2205fb88e6702aa8ab",
+  "n_correos_total": 5,
+  "n_correos_validos_para_metricas": 5,
+  "n_correos_con_error": 0,
+  "matriz_confusion": {
+    "tp": 5,
+    "tn": 0,
+    "fp": 0,
+    "fn": 0
+  },
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "auc_roc": null,
+  "mcc": null,
+  "fnr": 0.0,
+  "cobertura_senales_ingenieria_social": {
+    "descripcion": "%% de correos phishing (label_real=1) donde el arquetipo se pudo asignar (arquetipo_id != None)",
+    "n_phishing_reales": 5,
+    "n_con_arquetipo_asignado": 5,
+    "cobertura": 1.0
+  },
+  "costo_total_usd": 0.06375,
+  "tokens_input_total": 47500,
+  "tokens_output_total": 3250
+}

@@ -1,0 +1,16 @@
+arquetipo_id,arquetipo_label,emocion_dominante,tactica,n_construccion,sim_media,sim_std,sim_p1,sim_p5,sim_p10,sim_p25,sim_p50,sim_p75,sim_p90,sim_p95
+0,Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros),codicia,escasez,2726,0.417179,0.125270,0.125010,0.195875,0.246244,0.331564,0.418347,0.508051,0.585566,0.613289
+1,Spam de atraccion y mejora sexual masculina con tono agresivo y pseudo-respaldo de 'estudios',curiosidad,autoridad,4496,0.451674,0.092982,0.193102,0.288713,0.331379,0.395733,0.456549,0.517454,0.564516,0.593978
+2,Spam de acciones bursatiles 'pump and dump' (boletines de inversion falsos),codicia,autoridad,1567,0.518161,0.098993,0.241637,0.337189,0.384001,0.456376,0.529028,0.592888,0.634330,0.655967
+3,Esquema de dinero facil y ganancias garantizadas (estilo loteria/MLM),codicia,escasez,2883,0.511172,0.110868,0.216450,0.305656,0.353616,0.442904,0.522481,0.595053,0.641928,0.665009
+4,Farmacia en linea no autorizada (medicamentos sin receta),codicia,escasez,5459,0.602526,0.104512,0.293922,0.409230,0.459717,0.541915,0.616156,0.678339,0.725916,0.747088
+5,Venta de relojes de imitacion de marcas de lujo (replica Rolex),codicia,autoridad,2776,0.792819,0.084642,0.514351,0.612634,0.679581,0.756012,0.811103,0.851760,0.880599,0.893764
+6,Suplantacion de boletin de noticias (alertas CNN falsas),confianza,autoridad,1407,0.941486,0.028572,0.872269,0.894756,0.903289,0.924528,0.941319,0.960900,0.979358,0.986042
+7,Spam de aumento de tamano masculino con garantia de resultados,codicia,prueba social,2886,0.659930,0.122719,0.386143,0.455894,0.491819,0.560174,0.675615,0.765915,0.810056,0.830722
+8,Spam ofuscado de agrandamiento masculino con pseudo-respaldo medico (evasion de filtros),confianza,autoridad,1838,0.612565,0.088873,0.371905,0.441361,0.481992,0.564909,0.627597,0.673407,0.714672,0.732173
+9,Spam ofuscado de medicamentos genericos (evasion de filtros),codicia,escasez,2632,0.473796,0.129397,0.169573,0.257755,0.301243,0.382365,0.480311,0.562131,0.641367,0.687436
+10,Spam de hipotecas y prestamos preaprobados,codicia,escasez,916,0.682841,0.096242,0.415587,0.500804,0.543392,0.618697,0.709292,0.757057,0.788269,0.801686
+11,Fraude de anticipo / transferencia de fondos (estafa 419),urgencia,autoridad,3791,0.720622,0.095280,0.418900,0.536024,0.596091,0.672168,0.738438,0.788522,0.825496,0.843802
+12,Venta de software pirata a precio muy bajo,codicia,escasez,1523,0.620396,0.134501,0.327612,0.397968,0.428683,0.524308,0.626414,0.727668,0.814835,0.826021
+13,Phishing de verificacion y suspension de cuenta,miedo,escasez,2171,0.584213,0.088636,0.362573,0.432065,0.467389,0.526464,0.586523,0.647143,0.695483,0.724257
+14,Spam de bienestar generico con tono amistoso (plantilla anti-filtros de destinatario aleatorio),confianza,simpatia,995,0.742792,0.086010,0.501799,0.579439,0.630387,0.690043,0.749748,0.811348,0.844572,0.859397

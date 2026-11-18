@@ -1,0 +1,108 @@
+{
+  "modo": "explicacion",
+  "modelo_orquestador": "claude-haiku-4-5",
+  "servidores_habilitados": [
+    "archetype",
+    "knowledge",
+    "virustotal",
+    "coherence"
+  ],
+  "servidores_conectados": [
+    {
+      "server_id": "archetype",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "knowledge",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "virustotal",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "coherence",
+      "connected": true,
+      "detail": null
+    }
+  ],
+  "herramientas_invocadas": [
+    {
+      "servidor": "archetype",
+      "herramienta": "classify_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "coherence",
+      "herramienta": "analyze_coherence",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "match_reference_phrases",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "archetype",
+      "herramienta": "get_archetype",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "resultado": {
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.35,
+    "senales": [
+      {
+        "servidor": "archetype",
+        "descripcion": "El correo coincide con el arquetipo 2 'Spam de acciones bursátiles pump and dump' con similitud moderada-baja (0.402). La emoción dominante es codicia y la táctica es autoridad.",
+        "evidencia": "Similitud: 0.402, Arquetipo ID: 2, Frases características: 'company', 'stock', 'market', 'investment', 'information'"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Se detectó una incoherencia lógica en el umbral de alertas: el correo afirma enviar alertas 'whenever the stock valuation has increased or decreased by greater than 0%', pero fue disparado por un cambio de -0.28%.",
+        "evidencia": "Puntuación de coherencia: 0.75. Cita: 'You are being emailed an alert whenever the stock valuation has increased or decreased by greater than 0%.'"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "No se detectaron frases de referencia conocidas de phishing en el correo.",
+        "evidencia": "Búsqueda de frases de referencia: 0 coincidencias"
+      },
+      {
+        "servidor": "virustotal",
+        "descripcion": "El dominio shareholder.com es legítimo, creado en 1994, sin detecciones maliciosas (59 limpias, 32 no detectadas), categorizado como 'financial services'.",
+        "evidencia": "Reputación: 0, Malicious: 0%, Clean: 64.8%, Registrar: CSC Corporate Domains Inc., Creación: 1994-11-29"
+      },
+      {
+        "servidor": "virustotal",
+        "descripcion": "El dominio speedy.uwaterloo.ca pertenece a la Universidad de Waterloo, sin detecciones maliciosas, creado en 2000.",
+        "evidencia": "Reputación: 0, Malicious: 0%, Undetected: 100%, Registrant: Universidad de Waterloo, Creación: 2000-09-20"
+      }
+    ],
+    "explicacion": "El correo es un boletín de alerta de precio de acciones de Napster enviado por Shareholder.com, un servicio legítimo de alertas para inversores. Aunque el correo coincide con el arquetipo de phishing de 'spam de acciones bursátiles pump and dump' con una similitud de 0.402, esta similitud es moderada-baja y debe interpretarse con cautela: el arquetipo se entrenó exclusivamente con correos de phishing, por lo que una similitud baja no es prueba de legitimidad, pero tampoco de malicia. Los dominios involucrados (shareholder.com y speedy.uwaterloo.ca) son limpios en VirusTotal sin detecciones maliciosas. Shareholder.com es un servicio real de alertas de inversores creado en 1994 y categorizado como 'financial services'. La dirección del destinatario (avcooper@speedy.uwaterloo.ca) pertenece a la Universidad de Waterloo, institución legítima. No se detectaron frases de referencia conocidas de phishing. La única incoherencia detectada es una redacción imprecisa en el umbral de alertas ('greater than 0%'), que es un error menor de redacción, no un indicador de fraude. El contenido, formato y estructura son consistentes con un servicio de alertas de inversores legítimo de 2007."
+  }
+}

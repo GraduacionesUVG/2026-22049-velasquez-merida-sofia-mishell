@@ -1,0 +1,163 @@
+{
+  "modo": "explicacion",
+  "modelo_orquestador": "claude-haiku-4-5",
+  "servidores_habilitados": [
+    "archetype",
+    "knowledge",
+    "virustotal",
+    "coherence"
+  ],
+  "servidores_conectados": [
+    {
+      "server_id": "archetype",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "knowledge",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "virustotal",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "coherence",
+      "connected": true,
+      "detail": null
+    }
+  ],
+  "herramientas_invocadas": [
+    {
+      "servidor": "archetype",
+      "herramienta": "classify_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "coherence",
+      "herramienta": "analyze_coherence",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "match_reference_phrases",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "archetype",
+      "herramienta": "get_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "explain_concepts",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "get_definition",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "get_definition",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "get_definition",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "search_vt",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "search_vt",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "resultado": {
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.92,
+    "senales": [
+      {
+        "servidor": "coherence",
+        "descripcion": "Presencia de código JavaScript obfuscado al inicio del correo, completamente inconsistente con comunicación corporativa legítima",
+        "evidencia": "(()=>{const e=history.pushState,t=history.replaceState,a=history.back,r=history.forward;function n(){window.postMessage({_custom_type_:\"CUSTOM_ON_URL_CHANGED\"})}...}) - Este código manipula el historial del navegador y envía mensajes personalizados, técnica típica de ataques web maliciosos"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Dirección de correo sospechosa en el saludo: 'phishing@pot' es un dominio claramente indicativo de phishing, no una dirección legítima de cliente",
+        "evidencia": "Hallo phishing@pot - Ninguna empresa legítima saludaría a un cliente usando literalmente la palabra 'phishing' en su dirección"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Inconsistencia de identidad del remitente: se presenta como 'Kundensupport' (Soporte al Cliente genérico) pero está firmado por 'Max Stelter' (nombre personal)",
+        "evidencia": "Max Stelter Kundensupport - Mezcla confusa entre rol genérico y nombre personal, típico de correos falsificados"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Solicitud de registro personal mediante enlace para participar en sorteo, técnica clásica de phishing de recolección de credenciales",
+        "evidencia": "Um an der Verlosung teilzunehmen, müssen Sie sich einfach nur hier eintragen: An der Verlosung teilnehmen - Solicita que el usuario haga clic en un enlace para registrarse, típico de credential harvesting"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Incoherencia geográfica: correo en alemán supuestamente de Decathlon (marca europea) pero con dirección de desuscripción en Valley Cottage, NY (EE.UU.)",
+        "evidencia": "616 Corporate Way Ste.2-9092 Valley Cottage, NY 10989 - Dirección estadounidense inconsistente con marca europea y comunicación en alemán"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "Uso de tácticas de ingeniería social: Reward/Gain Bait (oferta de premio de 1.000 euros) para motivar interacción riesgosa",
+        "evidencia": "Wir verlosen ein Gutschein von Decathlon im Wert von 1.000 Euro - Oferta de recompensa financiera significativa, táctica documentada en literatura de phishing (Panda 2025, Alsufyani & Alzahrani 2021)"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "Explotación de la emoción de codicia (Greed): promesa de ganancia financiera para motivar acción rápida sin reflexión",
+        "evidencia": "1000Euro Gutschein - Cantidad significativa diseñada para explotar el deseo de ganancia financiera (Tóth et al. 2025)"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "Aplicación del principio de escasez: la oferta de sorteo crea urgencia implícita para que el usuario participe rápidamente",
+        "evidencia": "Wir verlosen ein Gutschein... Um an der Verlosung teilzunehmen - Estructura de sorteo que presiona acción rápida sin tiempo para deliberación (Cialdini 2007)"
+      },
+      {
+        "servidor": "archetype",
+        "descripcion": "El correo presenta características de spam/phishing con concatenación de frases de marketing y patrones de evasión de filtros",
+        "evidencia": "Similitud de 0.23 con arquetipo 0 (Spam farmacéutico con frases de marketing concatenadas) - aunque la similitud es baja, el correo comparte patrones de evasión de filtros y concatenación de frases típicas de ataques"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Puntuación de coherencia muy baja (0.2/1.0) indica múltiples incoherencias graves entre la identidad reclamada y el contenido real",
+        "evidencia": "Coherence score: 0.2 - Múltiples categorías de incoherencia detectadas: sender_vs_content, authority_vs_execution, identity_consistency, request_vs_context"
+      }
+    ],
+    "explicacion": "Este correo presenta evidencia abrumadora de ser un ataque de phishing sofisticado. El análisis integrado de múltiples fuentes revela:\n\n**Indicadores técnicos críticos:** El correo comienza con código JavaScript obfuscado que manipula el historial del navegador (history.pushState, history.replaceState, history.back, history.forward) y envía mensajes personalizados (window.postMessage con tipo CUSTOM_ON_URL_CHANGED). Esta técnica es característica de ataques web maliciosos diseñados para manipular el comportamiento del navegador del usuario, completamente inconsistente con comunicación corporativa legítima.\n\n**Incoherencias de identidad graves:** El correo se presenta como comunicación oficial de Decathlon pero saluda al destinatario como \"phishing@pot\" - literalmente incluyendo la palabra \"phishing\" en la dirección de correo. Esto es un indicador casi inequívoco de falsificación. Además, la firma mezcla un rol genérico (\"Kundensupport\") con un nombre personal (\"Max Stelter\"), creando ambigüedad sobre la identidad real del remitente.\n\n**Inconsistencias geográficas y lingüísticas:** El correo está completamente en alemán y se presenta como de Decathlon (marca europea), pero proporciona una dirección de desuscripción en Valley Cottage, Nueva York (EE.UU.), una incoherencia que sugiere falsificación.\n\n**Tácticas de ingeniería social documentadas:** El correo explota dos mecanismos psicológicos bien documentados en la literatura de phishing:\n1. **Reward/Gain Bait:** Ofrece un premio de 1.000 euros para motivar interacción (Panda 2025, Alsufyani & Alzahrani 2021)\n2. **Greed (Codicia):** Apela al deseo de ganancia financiera (Tóth et al. 2025)\n3. **Scarcity (Escasez):** La estructura de sorteo crea urgencia implícita para que el usuario participe rápidamente sin reflexión (Cialdini 2007)\n\n**Solicitud de credenciales:** El correo solicita que el usuario haga clic en un enlace para \"registrarse\" en el sorteo, patrón clásico de credential harvesting donde los atacantes recopilan información personal.\n\n**Coherencia interna muy baja:** El análisis de coherencia asignó una puntuación de 0.2/1.0, indicando múltiples incoherencias graves en cuatro categorías: remitente vs contenido, autoridad vs ejecución, consistencia de identidad, y solicitud vs contexto.\n\nLa combinación de código JavaScript malicioso, identidad falsificada (incluyendo literalmente \"phishing\" en la dirección), incoherencias geográficas, y explotación de tácticas de ingeniería social bien documentadas constituye evidencia concluyente de phishing."
+  }
+}

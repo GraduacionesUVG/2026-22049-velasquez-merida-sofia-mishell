@@ -1,0 +1,119 @@
+{
+  "modo": "explicacion",
+  "modelo_orquestador": "claude-haiku-4-5",
+  "servidores_habilitados": [
+    "archetype",
+    "knowledge",
+    "virustotal",
+    "coherence"
+  ],
+  "servidores_conectados": [
+    {
+      "server_id": "archetype",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "knowledge",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "virustotal",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "coherence",
+      "connected": true,
+      "detail": null
+    }
+  ],
+  "herramientas_invocadas": [
+    {
+      "servidor": "archetype",
+      "herramienta": "classify_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "coherence",
+      "herramienta": "analyze_coherence",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "match_reference_phrases",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "archetype",
+      "herramienta": "get_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "explain_concepts",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "coherence",
+      "herramienta": "list_incoherence_categories",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "resultado": {
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.72,
+    "senales": [
+      {
+        "servidor": "coherence",
+        "descripcion": "Incoherencia crítica: el correo promueve un plan de salud con beneficios pero termina pidiendo cancelar la suscripción, contradictorio con el propósito de venta",
+        "evidencia": "Cuerpo: 'Reduza o custo do seu plano de saúde e melhore a rede de atendimento' vs. conclusión: 'cancele sua inscrição aqui'"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Estructura defectuosa: el correo comienza con código HTML/CSS residual en lugar de un asunto claro, indicando error de templating",
+        "evidencia": "Inicio del correo: 'consultas body{margin:0;padding:0;}'"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Errores de autoridad: errores tipográficos inconsistentes con un proveedor profesional de seguros de salud",
+        "evidencia": "Texto: 'Plano até 40% mais barat o para você' (espacio incorrecto en 'barat o')"
+      },
+      {
+        "servidor": "archetype",
+        "descripcion": "El correo comparte características con patrones de ataque conocidos (arquetipo 0: spam farmacéutico con frases de marketing concatenadas para evasión de filtros)",
+        "evidencia": "Similitud con arquetipo 0: 0.29; tácticas detectadas: codicia (descuentos) y escasez (urgencia implícita)"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "Táctica de ingeniería social: apelación a codicia mediante incentivos económicos (descuentos de hasta 40%)",
+        "evidencia": "Texto: 'Plano até 40% mais barato para você que é MEI ou PJ'"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "Táctica de ingeniería social: urgencia implícita mediante llamadas a la acción inmediata",
+        "evidencia": "Texto: 'cote agora' (cotice ahora)"
+      }
+    ],
+    "explicacion": "El correo presenta múltiples señales de phishing/spam. Aunque la similitud con el arquetipo de spam farmacéutico es baja (0.29), el análisis de coherencia revela tres incoherencias críticas: (1) comienza con código HTML/CSS residual ('body{margin:0;padding:0;}') en lugar de un asunto estructurado, indicando un error de templating o formateo deficiente; (2) contradicción fundamental entre el contenido (promoción de plan de salud con beneficios) y la llamada a la acción final ('cancele sua inscrição aqui'), que contradice directamente el propósito de venta; (3) errores tipográficos ('barat o' en lugar de 'barato') inconsistentes con la autoridad de un proveedor profesional de seguros. El correo emplea tácticas de ingeniería social basadas en codicia (descuentos de hasta 40%) y urgencia implícita ('cote agora'). La combinación de estructura defectuosa, contradicción interna, errores de ejecución y llamadas a la acción confusas es característica de correos maliciosos diseñados para engañar o redirigir a víctimas hacia recursos maliciosos o para capturar datos."
+  }
+}

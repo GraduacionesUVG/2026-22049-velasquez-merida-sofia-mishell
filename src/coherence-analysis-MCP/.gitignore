@@ -1,0 +1,19 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Cache de pytest
+.pytest_cache/
+
+# Variables de entorno (contiene la API key del LLM, nunca se versiona)
+.env
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "phishing_pot_sample-1324",
+    "label_real": 1,
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.85,
+    "arquetipo_asignado": "#0 Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros) (sim=0.378)",
+    "input_tokens": 4915,
+    "output_tokens": 682,
+    "costo_usd": 0.008325,
+    "error": null
+  },
+  {
+    "id": "phishing_pot_sample-1065",
+    "label_real": 1,
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.92,
+    "arquetipo_asignado": "#13 Phishing de verificacion y suspension de cuenta (sim=0.521)",
+    "input_tokens": 16769,
+    "output_tokens": 1048,
+    "costo_usd": 0.022009,
+    "error": null
+  },
+  {
+    "id": "phishing_pot_sample-1336",
+    "label_real": 1,
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.85,
+    "arquetipo_asignado": "#13 Phishing de verificacion y suspension de cuenta (sim=0.520)",
+    "input_tokens": 16766,
+    "output_tokens": 1049,
+    "costo_usd": 0.022011,
+    "error": null
+  },
+  {
+    "id": "phishing_pot_sample-1139",
+    "label_real": 1,
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.68,
+    "arquetipo_asignado": "#0 Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros) (sim=0.420)",
+    "input_tokens": 5244,
+    "output_tokens": 688,
+    "costo_usd": 0.008684,
+    "error": null
+  },
+  {
+    "id": "phishing_pot_sample-1093",
+    "label_real": 1,
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.92,
+    "arquetipo_asignado": "#13 Phishing de verificacion y suspension de cuenta (sim=0.524)",
+    "input_tokens": 16766,
+    "output_tokens": 1041,
+    "costo_usd": 0.021971,
+    "error": null
+  },
+  {
+    "id": "trec_2007_361",
+    "label_real": 0,
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.05,
+    "arquetipo_asignado": "#13 Phishing de verificacion y suspension de cuenta (sim=0.260)",
+    "input_tokens": 15727,
+    "output_tokens": 1663,
+    "costo_usd": 0.024042,
+    "error": null
+  },
+  {
+    "id": "trec_2007_73",
+    "label_real": 0,
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.02,
+    "arquetipo_asignado": "#1 Spam de atraccion y mejora sexual masculina con tono agresivo y pseudo-respaldo de 'estudios' (sim=0.100)",
+    "input_tokens": 13688,
+    "output_tokens": 1131,
+    "costo_usd": 0.019343,
+    "error": null
+  },
+  {
+    "id": "trec_2007_374",
+    "label_real": 0,
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.05,
+    "arquetipo_asignado": "#0 Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros) (sim=0.158)",
+    "input_tokens": 18024,
+    "output_tokens": 1307,
+    "costo_usd": 0.024559,
+    "error": null
+  },
+  {
+    "id": "trec_2007_155",
+    "label_real": 0,
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.25,
+    "arquetipo_asignado": "#13 Phishing de verificacion y suspension de cuenta (sim=0.565)",
+    "input_tokens": 17104,
+    "output_tokens": 1208,
+    "costo_usd": 0.023144,
+    "error": null
+  },
+  {
+    "id": "trec_2007_104",
+    "label_real": 0,
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.65,
+    "arquetipo_asignado": "#9 Spam ofuscado de medicamentos genericos (evasion de filtros) (sim=0.249)",
+    "input_tokens": 7688,
+    "output_tokens": 934,
+    "costo_usd": 0.012358,
+    "error": null
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "herramienta": "rspamd",
+  "dataset": "experiments/external_eval/eval_external.csv",
+  "umbral_score": 6.0,
+  "timestamp_inicio": "2026-10-04T18:39:27.026964+00:00",
+  "timestamp_fin": "2026-10-04T18:45:08.395269+00:00",
+  "tiempo_total_segundos": 341.4,
+  "n_correos_total": 1000,
+  "n_correos_validos_para_metricas": 1000,
+  "n_correos_con_error": 0,
+  "matriz_confusion": {
+    "tp": 441,
+    "tn": 344,
+    "fp": 156,
+    "fn": 59
+  },
+  "accuracy": 0.785,
+  "precision": 0.7386934673366834,
+  "recall": 0.882,
+  "f1": 0.8040109389243391,
+  "auc_roc": 0.838706,
+  "mcc": 0.5810388497065079,
+  "fnr": 0.118,
+  "costo_total_usd": 0.0,
+  "notas": [
+    "Clasificacion: phishing si rspamd_score >= umbral_score (mismo criterio con el que Rspamd aplica 'add header').",
+    "El header Date sintetico de los correos TREC se reescribe con la fecha actual al enviar, para evitar la penalizacion DATE_IN_PAST por la antiguedad del CSV."
+  ]
+}

@@ -1,0 +1,51 @@
+# Dependencias
+node_modules/
+vendor/
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Entornos virtuales de Python (uno por proyecto en src/)
+.venv/
+venv/
+env/
+
+# Variables de entorno (solo se versionan los .env.example)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Caché y temporales
+.pytest_cache/
+.ipynb_checkpoints/
+.cache/
+tmp/
+temp/
+
+# IDE y asistentes
+.idea/
+.vscode/
+.claude/
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build
+dist/
+build/
+
+# Datos que no se versionan (se regeneran con los notebooks/scripts)
+src/Trabajo-de-Graduacion/data/*.csv
+src/Trabajo-de-Graduacion/data/raw/
+src/Trabajo-de-Graduacion/data/interim/
+src/Trabajo-de-Graduacion/data/processed/
+src/Trabajo-de-Graduacion/experiments/external_eval/phishing_pot/
+src/Trabajo-de-Graduacion/experiments/external_eval/eval_external.csv
+
+# Modelos de embeddings descargados en tiempo de ejecución
+src/pattern-archetype-MCP/embeddings/
