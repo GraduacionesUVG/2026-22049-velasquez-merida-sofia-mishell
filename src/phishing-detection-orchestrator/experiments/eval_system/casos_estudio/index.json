@@ -1,0 +1,58 @@
+[
+  {
+    "id": "phishing_pot_sample-1072",
+    "categoria": "TP",
+    "arquetipo": "Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros)",
+    "puntaje_veredicto": 0.98,
+    "path_explicacion": "casos_estudio/caso_phishing_pot_sample-1072.txt"
+  },
+  {
+    "id": "phishing_pot_sample-1287",
+    "categoria": "TP",
+    "arquetipo": "Spam de acciones bursatiles 'pump and dump' (boletines de inversion falsos)",
+    "puntaje_veredicto": 0.95,
+    "path_explicacion": "casos_estudio/caso_phishing_pot_sample-1287.txt"
+  },
+  {
+    "id": "phishing_pot_sample-1280",
+    "categoria": "TP",
+    "arquetipo": "Phishing de verificacion y suspension de cuenta",
+    "puntaje_veredicto": 0.95,
+    "path_explicacion": "casos_estudio/caso_phishing_pot_sample-1280.txt"
+  },
+  {
+    "id": "phishing_pot_sample-1044",
+    "categoria": "FN",
+    "arquetipo": "Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros)",
+    "puntaje_veredicto": 0.35,
+    "path_explicacion": "casos_estudio/caso_phishing_pot_sample-1044.txt"
+  },
+  {
+    "id": "phishing_pot_sample-1255",
+    "categoria": "FN",
+    "arquetipo": "Phishing de verificacion y suspension de cuenta",
+    "puntaje_veredicto": 0.35,
+    "path_explicacion": "casos_estudio/caso_phishing_pot_sample-1255.txt"
+  },
+  {
+    "id": "trec_2007_157",
+    "categoria": "FP",
+    "arquetipo": "Spam de acciones bursatiles 'pump and dump' (boletines de inversion falsos)",
+    "puntaje_veredicto": 0.42,
+    "path_explicacion": "casos_estudio/caso_trec_2007_157.txt"
+  },
+  {
+    "id": "trec_2007_384",
+    "categoria": "FP",
+    "arquetipo": "Suplantacion de boletin de noticias (alertas CNN falsas)",
+    "puntaje_veredicto": 0.72,
+    "path_explicacion": "casos_estudio/caso_trec_2007_384.txt"
+  },
+  {
+    "id": "trec_2007_376",
+    "categoria": "VT",
+    "arquetipo": "Spam de hipotecas y prestamos preaprobados",
+    "puntaje_veredicto": 0.78,
+    "path_explicacion": "casos_estudio/caso_trec_2007_376.txt"
+  }
+]

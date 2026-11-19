@@ -1,0 +1,30 @@
+# Datos crudos (no van a git por tamano)
+data/*.csv
+
+# Embeddings generados (no van a git por tamano, se regeneran con el notebook)
+embeddings/*.npy
+artifacts/*.npy
+
+# Los artifacts/ (arquetipos) SI van a git: son pequenos y el servidor MCP los necesita.
+# El .npy de embeddings dentro de artifacts/ se excluye arriba: es grande y se
+# regenera con el notebook, igual que los de embeddings/.
+
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Variables de entorno
+.env
+
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+.vscode/

@@ -1,0 +1,73 @@
+# Configuracion de los cuatro servidores MCP que integra el orquestador.
+#
+# Cada entrada define como arrancar un servidor via stdio (comando, argumentos,
+# directorio de trabajo y variables de entorno del subproceso). Los valores
+# entre "${...}" se interpolan en tiempo de carga desde variables de entorno
+# del proceso (que a su vez vienen del archivo .env en la raiz del proyecto).
+#
+# La clave "ablation_key" es el nombre que se usa en el flag --mcp de la CLI
+# para activar o desactivar cada servidor de forma independiente.
+#
+# IMPORTANTE: las rutas *_MCP_PATH deben apuntar a las carpetas locales de los
+# tres servidores propios. Configuralas en tu .env, nunca las hardcodees aqui.
+
+servers:
+  knowledge:
+    ablation_key: knowledge
+    description: >
+      Base de conocimiento sobre phishing, ingenieria social, principios de
+      persuasion, emociones y tacticas. No clasifica, solo fundamenta.
+    # No se usa el script de consola "knowledge-based-mcp": el .exe que genera
+    # uv para ese entry point falla al resolver el modulo cuando se lanza
+    # como subproceso desde una ruta con tildes (bug conocido de uv/pip en
+    # Windows con launchers de consola y rutas no ASCII). Invocar python.exe
+    # directamente evita el problema, igual que "run_server.py" en los otros
+    # dos servidores.
+    command: uv
+    args: ["run", "python", "-c", "from knowledge_based_mcp import main; main()"]
+    cwd: "${KNOWLEDGE_MCP_PATH}"
+    env:
+      PYTHONUTF8: "1"
+
+  archetype:
+    ablation_key: archetype
+    description: >
+      Compara el correo contra arquetipos de ataque aprendidos del corpus
+      mediante embeddings y clustering.
+    command: uv
+    args: ["run", "python", "run_server.py"]
+    cwd: "${PATTERN_ARCHETYPE_MCP_PATH}"
+    env: {}
+
+  coherence:
+    ablation_key: coherence
+    description: >
+      Audita incoherencias internas del correo (remitente vs contenido,
+      urgencia vs canal, asunto vs cuerpo, etc.) con evidencia citada.
+      Usa un LLM de Anthropic configurable de forma independiente al
+      orquestador, pero comparte la misma API key.
+    command: uv
+    args: ["run", "python", "run_server.py"]
+    cwd: "${COHERENCE_MCP_PATH}"
+    env:
+      PYTHONUTF8: "1"
+      COHERENCE_LLM_PROVIDER: "${COHERENCE_LLM_PROVIDER}"
+      COHERENCE_LLM_MODEL: "${COHERENCE_LLM_MODEL}"
+      COHERENCE_LLM_API_KEY: "${ANTHROPIC_API_KEY}"
+
+  virustotal:
+    ablation_key: virustotal
+    description: >
+      Verificacion tecnica de URLs, dominios, IPs y hashes contra VirusTotal.
+      Servidor de terceros (npm). Solo se invoca si el correo contiene URLs.
+    command: npx
+    args: ["-y", "@burtthecoder/mcp-virustotal"]
+    cwd: null
+    env:
+      VIRUSTOTAL_API_KEY: "${VIRUSTOTAL_API_KEY}"
+
+# Servidores habilitados por defecto segun el modo de ejecucion.
+# El flag --mcp de la CLI sobrescribe estos defaults para el estudio de ablation.
+mode_defaults:
+  veredicto: ["archetype", "knowledge", "virustotal"]
+  explicacion: ["archetype", "knowledge", "virustotal", "coherence"]

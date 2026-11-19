@@ -1,0 +1,37 @@
+# Secretos y configuracion local
+.env
+.env.*
+!.env.example
+
+# Datos y resultados (pueden contener correos reales o ser pesados)
+data/*.csv
+data/*.json
+data/*.jsonl
+!data/.gitkeep
+results/
+!results/.gitkeep
+
+# Entornos virtuales y cache de Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Cache de uv
+.uv-cache/
+
+# Node (por si se instala localmente el MCP de VirusTotal en vez de via npx)
+node_modules/
+
+# Archivos de IDE / sistema
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db

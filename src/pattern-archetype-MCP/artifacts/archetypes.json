@@ -1,0 +1,359 @@
+{
+  "meta": {
+    "modelo_embedding": "all-MiniLM-L6-v2",
+    "semilla": 42,
+    "fuente_datos": "data/corpus_construccion.csv",
+    "n_correos_phishing": 38066,
+    "k_optimo": 15,
+    "k_min": 5,
+    "k_max": 20,
+    "fecha_generacion": "2026-09-17T16:41:11.897240+00:00"
+  },
+  "archetypes": {
+    "0": {
+      "label": "Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros)",
+      "top_phrases": [
+        "url",
+        "com",
+        "ecard",
+        "http",
+        "link",
+        "card",
+        "para",
+        "www",
+        "click",
+        "message"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "escasez",
+      "sample_count": 2726,
+      "representative_examples": [
+        "FriendlySupportWelcomePhentrimine SpecialPricesFDAapprovedBestsellers URL",
+        "FriendlySupportWorldwideShippingSafeSecure RemedySpecialPrices100mg URL",
+        "TakeALookCertifiedFDAapproved SpecialPricesFriendlySupportPharm URL"
+      ]
+    },
+    "1": {
+      "label": "Spam de atraccion y mejora sexual masculina con tono agresivo y pseudo-respaldo de 'estudios'",
+      "top_phrases": [
+        "url",
+        "love",
+        "men",
+        "video",
+        "new",
+        "women",
+        "girls",
+        "life",
+        "make",
+        "watch"
+      ],
+      "dominant_emotion": "curiosidad",
+      "social_engineering_tactic": "autoridad",
+      "sample_count": 4496,
+      "representative_examples": [
+        "Get naughty in bed with her Find out more about our Top-rated Men's products here URL -- Using Opera's revolutionary e-mail client: URL",
+        "I love to bang her Studies show women hate men with low libidos URL -- Using Opera's revolutionary e-mail client: URL",
+        "For men with low libidos Bang her with all your might, renew your mighty morphing power pecker. URL -- Using Opera's revolutionary e-mail client: URL"
+      ]
+    },
+    "2": {
+      "label": "Spam de acciones bursatiles 'pump and dump' (boletines de inversion falsos)",
+      "top_phrases": [
+        "company",
+        "statements",
+        "business",
+        "logo",
+        "securities",
+        "report",
+        "stock",
+        "market",
+        "investment",
+        "information"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "autoridad",
+      "sample_count": 1567,
+      "representative_examples": [
+        "let get together when you get back for immediate release cal - bay ( stock symbol : cbyi ) watch for analyst \" strong buy recommendations \" and several advisory newsletters picking cbyi . cbyi has filed to be traded on theotcbb , share prices historically increase when companies get listed on this larger tradingexhange . cbyi is trading around 25 cents and should skyrocket to $ 2 . 66 - $ 3 . 25 a share in the near future . put cbyi on your watch list , acquire a postion today . reasons to inves",
+        "the best investments otc newsletter discover tomorrow ' s winners for immediate release cal - bay ( stock symbol : cbyi ) watch for analyst \" strong buy recommendations \" and several advisory newsletters picking cbyi . cbyi has filed to be traded on the otcbb , share prices historically increase when companies get listed on this larger trading exchange . cbyi is trading around 25 cents and should skyrocket to $ 2 . 66 - $ 3 . 25 a share in the near future . put cbyi on your watch list , acquire ",
+        "high voiume bounce on this stock this stock is undiscovered stock gem - just starting to trade millennium national events , inc . - symbo | : mnei miilenniums current roster of event sponsors inciudes such names as : wm wrigiey , american express , office depot , verizon , italian rose , twa , power sports , pizza hut , coca - coia , samue | adams , ciear channel communications , viacom , infinity broadcasting , budweiser , cox broadcasting , nbc loca | affiiiates , brown foreman ( jack daniels "
+      ]
+    },
+    "3": {
+      "label": "Esquema de dinero facil y ganancias garantizadas (estilo loteria/MLM)",
+      "top_phrases": [
+        "email",
+        "000",
+        "free",
+        "payment",
+        "website",
+        "information",
+        "money",
+        "program",
+        "mail",
+        "com"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "escasez",
+      "sample_count": 2883,
+      "representative_examples": [
+        "look ! y o u are a w i n n e r here ! - don ' t miss out ! ! 6674 f i n a l n o t i c e ! new program pays you immediately ! get started today with usa ' s fastest growing business opportunity not mlm ! here you get paid large checks the same day ! use the internet to make money 24 hours a day ! i made unbelievable $ 21 , 000 in june ! . . and will prove it , if you wish ! everybody can do this ! - a u t o p i l o t system ! - our system generates all leads for you ! minimum cash outlay gets you",
+        "look ! y o u are a w i n n e r here ! - don ' t miss out ! ! 6113 y o u r last chance for y o u r $ 3000 . 00 income per week ! give me 5 minutes , and i ' ll show you how to flood your bank account with serious cash , did you make $ 12 , 000 last month if not , you need to join us today ! - free turnkey marketing system ( a $ 2500 value ) - free ready - to - use \" order - pulling \" ads & sales letters - earn $ 1 , 000 cash on each and every sale to infinity ! - work from home and live the \" 1 -",
+        "LOOK ! Y O U are a W I N N E R here ! - Don't miss out ! ! 6113 Y O U R last chance for Y O U R $3000.00 INCOME per WEEK! Give Me 5 Minutes, And I'll Show You How To Flood Your Bank Account With Serious Cash, DID YOU MAKE $12,000 LAST MONTH IF NOT, YOU NEED TO JOIN US TODAY! - FREE Turnkey Marketing System (a $2500 Value) - FREE Ready-to-Use \"Order-Pulling\" Ads & Sales Letters - Earn $1,000 CASH on Each and Every Sale to Infinity! - Work From Home and Live the \"1-Minute\" Commute - Plug Into Our "
+      ]
+    },
+    "4": {
+      "label": "Farmacia en linea no autorizada (medicamentos sin receta)",
+      "top_phrases": [
+        "online",
+        "health",
+        "viagra",
+        "medications",
+        "pills",
+        "url",
+        "pharmacy",
+        "prices",
+        "meds",
+        "http"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "escasez",
+      "sample_count": 5459,
+      "representative_examples": [
+        "best med ^ s here jollivie user id : 0 afterward date : wed , 29 sep 2004 09 : 22 : 13 + 0400 mime - version : 1 . 0 content - type : multipart / alternative ; boundary = - - 211871034401845736 - - - - 211871034401845736 content - type : text / plain ; content - transfer - encoding : 7 bit why pay more when you can enjoy the best and cheapest pills online ? nearly 80 types to choose which makes ours pharmacy the largest and the best available . no appointments . no waiting rooms . no prior presc",
+        "get medicines here , great prices . hello , i have a great offer for you . . . we have the cheapest prices on the internet . our medicines are available to you without prescription . we have viagra , cialis , soma , meridia , propecia , lipitor , xanax , valium , celebrex , and more . - 100 % money back guarant?e ! - no consultation . - no prior prescription needed . - no appointments . - no waiting rooms . - no embarassment . - private confidential . - discreet packaging . - huge savings . - sh",
+        "you need this adam buy med ' s on - line ! up to 8 o % off vi - codin , ciaiis , viagra , xanax , vioxx , valium and many more ! fast delivery ! with wholesale prices ! - no con ^ sultation - no prior prescription needed - hu ' ge savings ! see why our customers re - order more than any competitor ! this is 1 - time mai - | ing . no re moval are re quired"
+      ]
+    },
+    "5": {
+      "label": "Venta de relojes de imitacion de marcas de lujo (replica Rolex)",
+      "top_phrases": [
+        "replica",
+        "watches",
+        "replica watches",
+        "rolex",
+        "replica classics",
+        "classics",
+        "watch",
+        "url",
+        "watches replica",
+        "replica watch"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "autoridad",
+      "sample_count": 2776,
+      "representative_examples": [
+        "View Our Wholesale Rolex Replica Watches Today Watches from the best brands at Replica Classics Luxurious costume replica watches at ... Looking for a watch? Visit Replica Classics URL",
+        "Looking for a watch? Visit Replica Classics QUALITY REPLICA WATCHES! 100% EXACT! ALL BRANDS! Excellent-made replica watches from Rolex Luxurious costume replica watches at ... URL",
+        "Excellent-made replica watches from Rolex No time to look for watch? Replica Classics Spring Big Sale...FANTASTIC Replica watches...Save 15% ... Offer variety replica watches URL"
+      ]
+    },
+    "6": {
+      "label": "Suplantacion de boletin de noticias (alertas CNN falsas)",
+      "top_phrases": [
+        "cnn",
+        "alert",
+        "custom",
+        "custom alert",
+        "alerts",
+        "cnn alerts",
+        "alerts custom",
+        "cable news",
+        "news network",
+        "cnn com"
+      ],
+      "dominant_emotion": "confianza",
+      "social_engineering_tactic": "autoridad",
+      "sample_count": 1407,
+      "representative_examples": [
+        "CNN Alerts: My Custom Alert CNN Alerts: My Custom Alert Alert Name: My Custom Alert Be a happier person with your family Fri, 8 Aug 2008 11:41:29 +0100 FULL STORY You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings. To manage your settings click here. To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here. Cable News Network. One CNN Center, Atlanta, Georgia 30303 © 2008 Cable News Network. A Time ",
+        "CNN Alerts: My Custom Alert CNN Alerts: My Custom Alert Alert Name: My Custom Alert Be a happier person with your family Fri, 8 Aug 2008 11:30:26 +0200 FULL STORY You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings. To manage your settings click here. To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here. Cable News Network. One CNN Center, Atlanta, Georgia 30303 © 2008 Cable News Network. A Time ",
+        "CNN Alerts: My Custom Alert CNN Alerts: My Custom Alert Alert Name: My Custom Alert Be a happier person with your family Fri, 8 Aug 2008 15:05:20 +0700 FULL STORY You have agreed to receive this email from CNN.com as a result of your CNN.com preference settings. To manage your settings click here. To alter your alert criteria or frequency or to unsubscribe from receiving custom email alerts, click here. Cable News Network. One CNN Center, Atlanta, Georgia 30303 © 2008 Cable News Network. A Time "
+      ]
+    },
+    "7": {
+      "label": "Spam de aumento de tamano masculino con garantia de resultados",
+      "top_phrases": [
+        "penis",
+        "url",
+        "inches",
+        "size",
+        "increase",
+        "length",
+        "gains",
+        "just",
+        "enlargement",
+        "manhood"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "prueba social",
+      "sample_count": 2886,
+      "representative_examples": [
+        "Real Enlargement Now, thanks to an incredible breakthrough, there is a herbal supplement available on the market that is absolutely GUARANTEED to add inches to your manhood, as well as increase thickness, pleasure, and allow you to maintain a rock hard, solid erect1on through intercourse. Size DOES matter - change your life today! URL",
+        "Real Enlargement Try it today - you have nothing to lose, just a lot to gain! Now, thanks to an incredible breakthrough, there is a herbal supplement available on the market that is absolutely GUARANTEED to add inches to your manhood, as well as increase thickness, pleasure, and allow you to maintain a rock hard, solid erect1on through intercourse. URL",
+        "Penis Enlargement - Truth Get your free bottles today, and change your life - why wait? Now, thanks to an incredible breakthrough, there is a herbal supplement available on the market that is absolutely GUARANTEED to add inches to your manhood, as well as increase thickness, pleasure, and allow you to maintain a rock hard, solid erect1on through intercourse. URL"
+      ]
+    },
+    "8": {
+      "label": "Spam ofuscado de agrandamiento masculino con pseudo-respaldo medico (evasion de filtros)",
+      "top_phrases": [
+        "ge",
+        "lar",
+        "po",
+        "har",
+        "ren",
+        "cy",
+        "en",
+        "ma",
+        "line",
+        "url"
+      ],
+      "dominant_emotion": "confianza",
+      "social_engineering_tactic": "autoridad",
+      "sample_count": 1838,
+      "representative_examples": [
+        "Don't be left behind - enlarge yourself now! jbwup qnjbot z The best way to e jp nla ub rge your p sp en an is is the safest one with perm wbk anent resu maf lts. Such met zf hod is Po jj we yw rEn xur lar mwx ge p mo en vd is enl jx argem xjl ent system. Convenient, discreet, easy to use, wear and take off this system is me lj dica uac lly ap fcl pro ykj ved and 100% sa ga fe.Or bb der with us and Po by we st rEn di lar mm ge will be delivered promptly without delays. Strict con cd fident in ia",
+        "Our target is your happy life dligz hq qv The best way to e as nla pry rge your p aa en slb is is the safest one with perm oz anent resu jcj lts. Such met fp hod is Po bzh we cge rEn ol lar rzn ge p tbd en air is enl avi argem fcr ent system. Convenient, discreet, easy to use, wear and take off this system is me koj dica ay lly ap ho pro yq ved and 100% sa ez fe.Gu xo aran jl teed res nuf ults with Po pe we ief rEn wy lar jwl ge will exceed your expectations. All you have to fill the or loo der ",
+        "You must be The Real Man with huge dignity pouvj n duk Choosing your p bjh eni ftz s enl eb arge my ment method you should remember that some widely advertised met geb hods are either ineffective or dange ihw rous. Some advertisements are based on lies, lack of m bar edi oo cal knowledge or are just frauds. Choose Po mcl we out rEn tjk lar vh ge pe bcf ni lho s enl la arge auo ment device to achieve pe znd ni qvs s si exx ze you dream of in a safe and m uce edic xxu ally approved way.Gu rrq aran"
+      ]
+    },
+    "9": {
+      "label": "Spam ofuscado de medicamentos genericos (evasion de filtros)",
+      "top_phrases": [
+        "mobile",
+        "phone",
+        "com",
+        "bismarck",
+        "prince",
+        "email",
+        "http",
+        "xanaax",
+        "day",
+        "samuel"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "escasez",
+      "sample_count": 2632,
+      "representative_examples": [
+        "xnax for less sa ; ve 7 _ 0 % ord . ering onl / ine to ` day ! vi ! sit our site and sa ! ve big baklava chip drunkard cow elizabethan embargo assassin tasty viennese posey coax deep idea haggard bourbon blockade booty stephenson afoot salute collide hewlett patent dental blurt appoint authoritative precautionary ashtray ablate quizzes datsun hitchcock catalyst garrulous pyroxenite extravaganza boorish accidental wolves standstill polo curium core kennecott echoes appleton epistemology onetime c",
+        "feel great at any time lund up to 80 % savings on xanax , valium , phentermine , viagra here for email removal , go here . bondage secondhand beware epimorphism drawn pause communal bryant dodecahedral cavemen degree lodowick primp continent deduce accuse stannous cancellingarmament vi mackinac apparel desorption accreditate cornish connally hecatomb gonzalez nitpick redound inscrutable demountable bronzy christian capstone jiltbumble warwick helix cryptanalyze adore scrooge why description excu",
+        "have seex liiike a poooorn star hi misty , having a heeeeell of a time commaaaanding your vesseel ? this new ship ' s birthiiiing named ciiiiaaalis is your answer . sailor , tamra drew geometrician affidavit bespectacled ampersand bucharest furze ride sketchbook landlord filial incant bub clank booze ornery bamboo speak pronounce slavonic jubilate raleigh transistor brillouin muscovy demand irs anionic dissemble horsewomen innkeeper cornish . collusion regale chum bract bini debra epigram parr c"
+      ]
+    },
+    "10": {
+      "label": "Spam de hipotecas y prestamos preaprobados",
+      "top_phrases": [
+        "mortgage",
+        "credit",
+        "rate",
+        "loan",
+        "rates",
+        "home",
+        "refinance",
+        "http",
+        "form",
+        "application"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "escasez",
+      "sample_count": 916,
+      "representative_examples": [
+        "hey . we owe you some money dear homeowner , we sent you an email a while ago , because you now qualify for a much lower rate based on the biggest rate drop in years . you have been pre - approved for a $ 400 , 000 home loan with a low fixed rate . follow this link to process your application : 1 minute approval form . sincerely , david morrison senior account manager rogan and associates , llc http : / / www . lending - blocksx . com / r . php - re - mov - e me from the list",
+        "take advantage of low interest - rates ! november update : further drop ! rates starting at 3 . 25 % fixed your mortgage process is pre - approved please use our secure site to fill - out your application . visit us at : http : / / www . perfectvgr . com / x / loan . php ? id = sas thank you , odis pitts www . mortgege . info / st . html",
+        "Adv: Mortgage Quotes Fast Online, No Cost **![]( URL If this promotion has reached you in error and you would prefer not to receive marketing messages from us, please send an email to cease-and- EMAIL (all one word, no spaces) giving us the email address in question or call 1-888-748-7751 for further assistance. _Gain access to a** _**Vast Network Of Qualified Lenders at Nationwide Network!**__ This is a zero-cost service which enables you to shop for a mortgage conveniently from your home compu"
+      ]
+    },
+    "11": {
+      "label": "Fraude de anticipo / transferencia de fondos (estafa 419)",
+      "top_phrases": [
+        "bank",
+        "money",
+        "account",
+        "transaction",
+        "fund",
+        "country",
+        "mr",
+        "business",
+        "kin",
+        "transfer"
+      ],
+      "dominant_emotion": "urgencia",
+      "social_engineering_tactic": "autoridad",
+      "sample_count": 3791,
+      "representative_examples": [
+        "CONFIDENTIAL PROPOSAL FROM, MR:MOHAMED DADA HAFAR THE CHIEF AUDITOR INCHARGE.AFRICAN DEVELOPMANT BANK{ADB}. OUAGADOUGOU,BURKINA FASO. WEST AFRICA. Dear Partner, I presumed that all is well with you and your family.Please let this do not be a surprise proposal to you because i got your contact information from the international directory in few weeks ago before i decided to contact on this magnitude and lucrative transaction for our future survival in life.Moreover, i have laid all the solemn tru",
+        "VERY URGENT FROM THE DESK OF DR AZIZAN COKER BILL AND EXCHANGE MANAGER, BANK OF AFRICA, OUAGADOUGOU BUKINA-FASO. PLANE CRASH WEB SITE... URL (\"REMITTANCE OF $25.8 MILLION U.S.A DOLLARS (CONFIDENTIAL IS THE CASE\") Compliment Of The Day, I am Dr Azizan Coker from burkina faso.I want to seek your assistance after my discovery during auditing in my bank as am the manager of Bill and Exchange at the Foriegn Remittance Department of BANK OF AFRICA,(B.O.A.) In my department we discovered an abandoned s",
+        "URGENT REPLY I am Mr Amedi Ali, the director in charge of auditing and accounting section of Bank Of Africa,Ouagadougou Burkina faso West Africa with due respect and regard.I have decided to contact you on a business transaction that will be very beneficial to both of us at the end of the transaction. During our investigation and auditing in this bank , my department came across a very hugesum of money belonging to a aperson who died on July 2003 in a plane crash and the fund has been dormant in"
+      ]
+    },
+    "12": {
+      "label": "Venta de software pirata a precio muy bajo",
+      "top_phrases": [
+        "software",
+        "adobe",
+        "xp",
+        "professional",
+        "windows",
+        "95",
+        "softwares",
+        "pro",
+        "2004",
+        "microsoft"
+      ],
+      "dominant_emotion": "codicia",
+      "social_engineering_tactic": "escasez",
+      "sample_count": 1523,
+      "representative_examples": [
+        "office xp $ 100 , norton 2004 $ 15 , xp pro $ 5 o : adobe photosh 0 p $ 8 o . office 2003 $ 8 o ardeidae brush included footpath supplicate helve dreidel banderole moniliales quidam lumpish apoplectic super cheaap softwares & shiip to all countrieswe have every popular softwares u need ! you name it normal : $ 299 . oo ; you saave $ 249 . oo adobe acrobat v 6 . o professional pc - my price : $ 1 oo ; normal : $ 449 . 95 ; you saave $ 349 . 95 & more more more softwares to choose from we do have ",
+        "office xp $ 100 , norton 2004 $ 15 , xp pro $ 5 o : adobe photosh 0 p $ 8 o . office 2003 $ 8 o remained seeing magazine wanted likely window send trying promised itself million studying quietly king clear person worth road past money super cheaap softwares & shiip to all countrieswe have every popular softwares u need ! you name it normal : $ 299 . oo ; you saave $ 249 . oo adobe acrobat v 6 . o professional pc - my price : $ 1 oo ; normal : $ 449 . 95 ; you saave $ 349 . 95 & more more more so",
+        "hi paliourg software cds 15 and 99 get al software in 1 cd hi paliourg ! monsters dlscounts up to 90 % only 5 days if you don ' t have enough money to buy needed software or think desired programs isn ' t worth the price , then this service is right for you . we make all software to be near you . all programs you can download or order on cd - rom by airmail . order any program you need for a low price . view our full catalog now . most popular products from our price list . 30 usd adobe photosho"
+      ]
+    },
+    "13": {
+      "label": "Phishing de verificacion y suspension de cuenta",
+      "top_phrases": [
+        "account",
+        "email",
+        "mail",
+        "message",
+        "update",
+        "usaa",
+        "click",
+        "security",
+        "information",
+        "verify"
+      ],
+      "dominant_emotion": "miedo",
+      "social_engineering_tactic": "escasez",
+      "sample_count": 2171,
+      "representative_examples": [
+        "EMAIL warning delivery notification Dear EMAIL , We received some Security notifications regarding your account: EMAIL , this might be due to Phising Attempts on your email or irregular login attempts on your account. Failure to verify E-Mail Account would result to account closure. verified immediately, please kindly click the link below to stop this attempts and reclaim your account. Continue verification Thanks, The Email Security Team This email has been sent from an unmonitored email addres",
+        "Update Your Account Dear User, your account has exceeded its limit and needs to be verified, if not verified within 24 hours, we shall suspend your account from receiving or sending emails. You are required to update your mailbox to protect your account and continue using our services. Click the button to Update Your Account Please do not reply to this e-mail. Sincerly. Customer Service Email ID 1009 © 2003-2019 mailbox . All rights reserved Dear User, your account has exceeded its limit and nee",
+        "=?utf-8?q?=E2=9D=B6E-mail_authentication=3A_=E2=9C=892_incoming_pending_m?= =?utf-8?b?ZXNzYWdlKHMp?= Attention EMAIL , EMAIL SEVER WARNING We inform you that your account ( EMAIL ) will be closed on 26/09/2019 because you have been ignoring all our update messages sent to you. If you wish to continue using your account,update now to continue using our service. Click here to update Notice: Ignoring this message will cause your account to be terminated without your permission. Thanks , Sincerely M"
+      ]
+    },
+    "14": {
+      "label": "Spam de bienestar generico con tono amistoso (plantilla anti-filtros de destinatario aleatorio)",
+      "top_phrases": [
+        "life glad",
+        "work think",
+        "personal life",
+        "summer",
+        "site details",
+        "glad",
+        "think health",
+        "health personal",
+        "till",
+        "com aug"
+      ],
+      "dominant_emotion": "confianza",
+      "social_engineering_tactic": "simpatia",
+      "sample_count": 995,
+      "representative_examples": [
+        "helpful for your health. Dear 1bb40880611d16e6095b7f248b6fad04 Summer is a great time to take a break off at work and think about your health & personal life. And we are glad to help you with it. From now on till 1st of September you can use our special offer. Visit our site for more details. answerdry.com 6 Aug 2008 11:40:10",
+        "helpful for your health. Dear 36a696c41ea9bceebd99e7512e8e2f76 Summer is a great time to take a break at work and think about your health & personal life. And we are glad to help you with it. From now on till 30th of September you can use our special offer. Visit our site for more details. answerdry.com 6 Aug 2008 11:26:43",
+        "helpful for your health. Dear 39e80d0a79d469ea3d799418f3e74a38 Summer is a exact time to take a break at work and think about your health & personal life. And we are glad to assist you with it. From now on till 30th of October you can use our specific proposal. Visit our site for further details. herrespect.com 7 Aug 2008 05:48:19"
+      ]
+    }
+  }
+}

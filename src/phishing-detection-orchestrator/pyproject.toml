@@ -1,0 +1,44 @@
+[project]
+name = "phishing-orchestrator"
+version = "0.1.0"
+description = "Cliente orquestador que integra servidores MCP para deteccion explicable de phishing"
+readme = "README.md"
+authors = [
+    { name = "Sofiamishel2003", email = "estebanmezag19@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=2.0.0",
+    "anthropic>=0.69.0",
+    "pydantic>=2.7.0",
+    "pandas>=2.2.0",
+    "pyyaml>=6.0.1",
+    "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.24.0",
+]
+analysis = [
+    "scikit-learn>=1.5.0",
+    "matplotlib>=3.9.0",
+    "seaborn>=0.13.0",
+    "jupyter>=1.0.0",
+    "nbformat>=5.10.0",
+]
+ui = [
+    "streamlit>=1.49.0",
+]
+
+[project.scripts]
+phishing-orchestrator = "phishing_orchestrator.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

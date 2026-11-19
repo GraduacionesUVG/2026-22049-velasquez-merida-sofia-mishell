@@ -1,0 +1,137 @@
+{
+  "modo": "explicacion",
+  "modelo_orquestador": "claude-haiku-4-5",
+  "servidores_habilitados": [
+    "archetype",
+    "knowledge",
+    "virustotal",
+    "coherence"
+  ],
+  "servidores_conectados": [
+    {
+      "server_id": "archetype",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "knowledge",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "virustotal",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "coherence",
+      "connected": true,
+      "detail": null
+    }
+  ],
+  "herramientas_invocadas": [
+    {
+      "servidor": "archetype",
+      "herramienta": "classify_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "coherence",
+      "herramienta": "analyze_coherence",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "match_reference_phrases",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_url_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_relationship",
+      "ok": false,
+      "error": "Tool 'get_domain_relationship' execution failed: VirusTotal API error: You are not authorized to perform the requested operation"
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "explain_concepts",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "resultado": {
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.92,
+    "senales": [
+      {
+        "servidor": "coherence",
+        "descripcion": "Incoherencia severa con puntuación 0.15: el correo contiene 5 incoherencias críticas incluyendo contradicción directa (solicita llamada pero dice 'should stop bothering you'), corrupción de autoridad (texto profesional con caracteres Unicode garbled), repetición masiva de párrafos idénticos, variables de plantilla sin llenar ([company], {industry}, ____), e identificador embebido en cuerpo en lugar de firma",
+        "evidencia": "Puntuación coherence_score: 0.15; Citas literales: '1)â€¯ Youâ€™re all set with ____ and I should stop bothering you.' y 'L w‌‌‌‌‌‌o‌‌n s‌‌‌‌‌‌i p‌‌o‌‌‌‌‌‌r‌‌‌‌‌‌d‌‌‌‌‌‌r‌‌iΑ E' y 'rodrigofp-8955366Let me know if you have a few minutes'"
+      },
+      {
+        "servidor": "archetype",
+        "descripcion": "Similitud 0.36 con Archetype 0: 'Spam farmacéutico y de pastillas para adelgazar con frases de marketing concatenadas (evasión de filtros)'. El patrón detectado es específicamente de obfuscación mediante concatenación de frases repetidas para evadir filtros de spam",
+        "evidencia": "archetype_id: 0, similarity: 0.3606666922569275, label: 'Spam farmaceutico y de pastillas para adelgazar con frases de marketing concatenadas (evasion de filtros)', top_phrases: ['url', 'com', 'http', 'link', 'click']"
+      },
+      {
+        "servidor": "virustotal",
+        "descripcion": "Dominio click.pstmrk.it tiene reputación negativa (-42) con 9 votos maliciosos vs 2 harmless en comunidad VirusTotal. La URL embebida redirige mediante este dominio sospechoso",
+        "evidencia": "Domain: click.pstmrk.it, Reputation Score: -42, Community Votes: Malicious: 9, Harmless: 2, URL Status Code: 302 (redirección)"
+      },
+      {
+        "servidor": "virustotal",
+        "descripcion": "Dominio links.truthsocial.com contiene 2 detecciones maliciosas (2.2%) en análisis de VirusTotal. El correo redirige hacia este dominio a través del rastreador click.pstmrk.it",
+        "evidencia": "Domain: links.truthsocial.com, Malicious: 2 (2.2%), Total Scans: 91, URL target: links.truthsocial.com%2Flink%2F111035611772122607"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "El correo utiliza ingeniería social mediante pretexting (falsa oferta de servicio de prospecting de ventas) con urgencia temporal para suprimir deliberación y hacer que el usuario siga un enlace",
+        "evidencia": "Conceptos detectados: goal_follow_link (objetivo de hacer seguir enlace), emotion_urgency (presión temporal: 'Let me know if you have a few minutes next week'), concept_social_engineering (manipulación psicológica mediante pretexting de servicio de CRM)"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "El correo contiene múltiples variables de plantilla sin llenar, indicador de generación automatizada o incompleta típica de campañas masivas de phishing",
+        "evidencia": "Placeholders literales sin personalización: 'How to Export [company] Prospects', 'In working with other {industry}', 'one of the key issues theyâ€™re struggling with is {key issue}', 'Youâ€™re all set with ____'"
+      }
+    ],
+    "explicacion": "Este correo es phishing con alta confianza. Presenta múltiples indicadores críticos convergentes: (1) Obfuscación técnica deliberada mediante caracteres Unicode corruptos, repeticiones masivas de frases idénticas y texto garbled (patrón detectado por archetype como \"evasión de filtros\"), (2) Incoherencia severa con puntuación 0.15: contiene contradicciones internas (solicita llamada pero dice \"should stop bothering you\"), variables de plantilla sin llenar ([company], {industry}, ____ ), e identificador \"rodrigofp-8955366\" embebido en el cuerpo en lugar de firma legítima, (3) Infraestructura maliciosa: la URL embebida redirige a través de click.pstmrk.it (dominio con reputación -42 y 9 votos maliciosos en VirusTotal) hacia links.truthsocial.com (2 detecciones maliciosas), (4) Objetivo claro de ingeniería social: busca que el usuario siga un enlace mediante pretexting (falsa oferta de servicio de prospecting de ventas) con urgencia temporal (\"few minutes next week\"). La combinación de obfuscación para evasión de filtros, incoherencia extrema, dominios con reputación negativa y un objetivo de rastreo de clics es característica de campañas de phishing masivo automatizadas."
+  }
+}

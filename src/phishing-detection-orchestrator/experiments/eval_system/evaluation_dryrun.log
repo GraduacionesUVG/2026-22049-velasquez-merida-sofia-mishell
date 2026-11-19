@@ -1,0 +1,35 @@
+[2026-09-17 15:55:26] [phishing_pot_sample-1] Iniciando análisis
+[2026-09-17 15:55:26] [phishing_pot_sample-1] Arquetipo: #13 - Phishing de verificacion y suspension de cuenta (SIMULADO)
+[2026-09-17 15:55:26] [phishing_pot_sample-1] Clasificación: phishing | Score: 0.87
+[2026-09-17 15:55:26] [phishing_pot_sample-1] Tokens: input=9500 output=650 costo=$0.01275
+[2026-09-17 15:55:26] [phishing_pot_sample-1] ✓ Completado en 1.2s (SIMULADO)
+[2026-09-17 15:55:26] [phishing_pot_sample-10] Iniciando análisis
+[2026-09-17 15:55:26] [phishing_pot_sample-10] Arquetipo: #13 - Phishing de verificacion y suspension de cuenta (SIMULADO)
+[2026-09-17 15:55:26] [phishing_pot_sample-10] VT: 2 indicadores encontrados, consultando...
+[2026-09-17 15:55:26] [phishing_pot_sample-10] VT: sign.in → malicious (2)
+[2026-09-17 15:55:26] [phishing_pot_sample-10] VT: 103.225.77.255 → malicious (2)
+[2026-09-17 15:55:26] [phishing_pot_sample-10] Clasificación: phishing | Score: 0.87
+[2026-09-17 15:55:26] [phishing_pot_sample-10] Tokens: input=9500 output=650 costo=$0.01275
+[2026-09-17 15:55:26] [phishing_pot_sample-10] ✓ Completado en 1.2s (SIMULADO)
+[2026-09-17 15:55:26] [phishing_pot_sample-100] Iniciando análisis
+[2026-09-17 15:55:26] [phishing_pot_sample-100] Arquetipo: #13 - Phishing de verificacion y suspension de cuenta (SIMULADO)
+[2026-09-17 15:55:26] [phishing_pot_sample-100] VT: 1 indicadores encontrados, consultando...
+[2026-09-17 15:55:26] [phishing_pot_sample-100] VT: div.preheader → malicious (2)
+[2026-09-17 15:55:26] [phishing_pot_sample-100] Clasificación: phishing | Score: 0.87
+[2026-09-17 15:55:26] [phishing_pot_sample-100] Tokens: input=9500 output=650 costo=$0.01275
+[2026-09-17 15:55:26] [phishing_pot_sample-100] ✓ Completado en 1.2s (SIMULADO)
+[2026-09-17 15:55:27] [phishing_pot_sample-1000] Iniciando análisis
+[2026-09-17 15:55:27] [phishing_pot_sample-1000] Arquetipo: #13 - Phishing de verificacion y suspension de cuenta (SIMULADO)
+[2026-09-17 15:55:27] [phishing_pot_sample-1000] VT: 1 indicadores encontrados, consultando...
+[2026-09-17 15:55:27] [phishing_pot_sample-1000] VT: hotmail.com → malicious (2)
+[2026-09-17 15:55:27] [phishing_pot_sample-1000] Clasificación: phishing | Score: 0.87
+[2026-09-17 15:55:27] [phishing_pot_sample-1000] Tokens: input=9500 output=650 costo=$0.01275
+[2026-09-17 15:55:27] [phishing_pot_sample-1000] ✓ Completado en 1.2s (SIMULADO)
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] Iniciando análisis
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] Arquetipo: #13 - Phishing de verificacion y suspension de cuenta (SIMULADO)
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] VT: 2 indicadores encontrados, consultando...
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] VT: sign.in → malicious (2)
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] VT: 103.225.77.255 → malicious (2)
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] Clasificación: phishing | Score: 0.87
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] Tokens: input=9500 output=650 costo=$0.01275
+[2026-09-17 15:55:27] [phishing_pot_sample-1001] ✓ Completado en 1.2s (SIMULADO)

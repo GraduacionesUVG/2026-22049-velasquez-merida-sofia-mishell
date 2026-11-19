@@ -1,0 +1,119 @@
+{
+  "modo": "explicacion",
+  "modelo_orquestador": "claude-haiku-4-5",
+  "servidores_habilitados": [
+    "archetype",
+    "knowledge",
+    "virustotal",
+    "coherence"
+  ],
+  "servidores_conectados": [
+    {
+      "server_id": "archetype",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "knowledge",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "virustotal",
+      "connected": true,
+      "detail": null
+    },
+    {
+      "server_id": "coherence",
+      "connected": true,
+      "detail": null
+    }
+  ],
+  "herramientas_invocadas": [
+    {
+      "servidor": "archetype",
+      "herramienta": "classify_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "coherence",
+      "herramienta": "analyze_coherence",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "match_reference_phrases",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_domain_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "virustotal",
+      "herramienta": "get_ip_report",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "archetype",
+      "herramienta": "get_archetype",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "explain_concepts",
+      "ok": true,
+      "error": null
+    },
+    {
+      "servidor": "knowledge",
+      "herramienta": "search_knowledge",
+      "ok": true,
+      "error": null
+    }
+  ],
+  "resultado": {
+    "clasificacion": "phishing",
+    "puntaje_riesgo": 0.92,
+    "senales": [
+      {
+        "servidor": "archetype",
+        "descripcion": "El correo coincide con el arquetipo 13 de phishing conocido: 'Phishing de verificación y suspensión de cuenta'",
+        "evidencia": "Similitud 0.52 con arquetipo que agrupa 2,171 correos de phishing. Tácticas: miedo y escasez. Frases características: 'account', 'security', 'verify', 'click'"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Múltiples incoherencias internas entre el remitente, el contenido y el tono",
+        "evidencia": "Puntuación de coherencia 0.35. Incoherencias detectadas: (1) Urgencia vs. canal: 'A user from Russia/Moscow just logged into your account from a new device, If this wasn't you, please report the user.' con formato pobre; (2) Autoridad vs. ejecución: afirma ser 'The Microsoft account team' pero con errores gramaticales; (3) Solicitud vaga 'Report The User' inconsistente con procedimientos reales de Microsoft"
+      },
+      {
+        "servidor": "virustotal",
+        "descripcion": "El dominio sign.in tiene detecciones maliciosas y está categorizado como SPAM",
+        "evidencia": "2 detecciones maliciosas (2.2%), 1 sospechosa (1.1%) de 91 escaneos. Categorizado como 'SPAM URLs' por Webroot y 'Suspicious' por alphaMountain.ai"
+      },
+      {
+        "servidor": "virustotal",
+        "descripcion": "La IP 103.225.77.255 tiene mala reputación y está ubicada en India, no en Rusia",
+        "evidencia": "Reputación -4, 4 votos maliciosos de la comunidad. Ubicación: India (APNIC registry), pero el correo afirma 'Country/region: Russia/Moscow'. Discrepancia geográfica clara"
+      },
+      {
+        "servidor": "knowledge",
+        "descripcion": "El correo utiliza tácticas de ingeniería social: miedo y escasez",
+        "evidencia": "Mensaje de alerta de seguridad que crea urgencia ('If this wasn't you, please report the user') y amenaza implícita de pérdida de cuenta, explotando el miedo a la comprensión de cuenta"
+      },
+      {
+        "servidor": "coherence",
+        "descripcion": "Presencia de dirección de correo sospechosa y texto basura masivo",
+        "evidencia": "Dirección de remitente contiene literalmente 'phishing@pot'. El correo termina con miles de palabras aleatorias en múltiples idiomas (ofuscación típica de phishing para evadir filtros)"
+      }
+    ],
+    "explicacion": "Este correo es phishing con alta confianza. El análisis integrado de múltiples fuentes revela un patrón coordinado de engaño:\n\n**Similitud con arquetipos conocidos**: El correo coincide con el arquetipo 13 \"Phishing de verificación y suspensión de cuenta\" (similitud 0.52) que explota miedo y escasez. Este arquetipo agrupa 2,171 correos de phishing confirmados que utilizan la misma estrategia: simular una alerta de seguridad para presionar al usuario a tomar acción inmediata.\n\n**Incoherencias graves detectadas**: El análisis de coherencia (puntuación 0.35) identificó cuatro categorías de inconsistencia: (1) La urgencia del mensaje (acceso no autorizado desde el extranjero) contrasta con el formato pobre y errores gramaticales; (2) Afirma ser de \"The Microsoft account team\" pero carece del profesionalismo esperado; (3) La solicitud vaga de \"Report The User\" es inconsistente con cómo Microsoft maneja incidentes reales; (4) El tono genérico e impersonal no coincide con comunicaciones auténticas de Microsoft.\n\n**Indicadores técnicos sospechosos**: El dominio sign.in tiene 2 detecciones maliciosas (2.2%) y está categorizado como SPAM URLs por Webroot. La IP 103.225.77.255 tiene una reputación negativa (-4) con 4 votos maliciosos de la comunidad, y está ubicada en India, no en Rusia como afirma el correo (discrepancia geográfica clara).\n\n**Señales de ofuscación y engaño**: El correo contiene una dirección de remitente literal \"phishing@pot\" (que contiene la palabra \"phishing\"), seguida de una enorme cantidad de texto basura/ruido al final del mensaje, una técnica común para evadir filtros de spam y ofuscar el contenido malicioso.\n\n**Falta de elementos legítimos**: No hay enlaces reales, botones de acción claros, o instrucciones específicas de seguridad que Microsoft proporcionaría en una alerta genuina. En su lugar, hay instrucciones vagas y un formato desorganizado."
+  }
+}

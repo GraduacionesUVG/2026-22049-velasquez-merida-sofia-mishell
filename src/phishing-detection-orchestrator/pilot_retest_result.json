@@ -1,0 +1,158 @@
+[
+  {
+    "id": "trec_2007_361",
+    "label_real": 0,
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.05,
+    "vt_calls_pedidos": 5,
+    "vt_calls_a_servidor": 5,
+    "n_llamadas_modelo": 2,
+    "input_tokens": 16224,
+    "output_tokens": 1488,
+    "costo_usd": 0.023664,
+    "input_tokens_antes": 15727,
+    "output_tokens_antes": 1663,
+    "costo_usd_antes": 0.024042,
+    "detalle_vt": [
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "romuald.net.eu.org"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "eu.org"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "braille.uwo.ca"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_url_report",
+        {
+          "url": "http://www.romuald.net.eu.org"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_url_report",
+        {
+          "url": "http://speech.braille.uwo.ca/mailman/listinfo/speakup"
+        },
+        "servidor"
+      ]
+    ]
+  },
+  {
+    "id": "trec_2007_374",
+    "label_real": 0,
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.02,
+    "vt_calls_pedidos": 6,
+    "vt_calls_a_servidor": 6,
+    "n_llamadas_modelo": 2,
+    "input_tokens": 18211,
+    "output_tokens": 1278,
+    "costo_usd": 0.024601,
+    "input_tokens_antes": 18024,
+    "output_tokens_antes": 1307,
+    "costo_usd_antes": 0.024559,
+    "detalle_vt": [
+      [
+        "virustotal__get_url_report",
+        {
+          "url": "http://www.stats.ox.ac.uk/~ripley/"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_url_report",
+        {
+          "url": "https://stat.ethz.ch/mailman/listinfo/r-help"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_url_report",
+        {
+          "url": "http://www.R-project.org/posting-guide.html"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "stats.ox.ac.uk"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "stat.ethz.ch"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "r-project.org"
+        },
+        "servidor"
+      ]
+    ]
+  },
+  {
+    "id": "trec_2007_155",
+    "label_real": 0,
+    "clasificacion": "legitimo",
+    "puntaje_riesgo": 0.15,
+    "vt_calls_pedidos": 4,
+    "vt_calls_a_servidor": 4,
+    "n_llamadas_modelo": 2,
+    "input_tokens": 17176,
+    "output_tokens": 1283,
+    "costo_usd": 0.023591,
+    "input_tokens_antes": 17104,
+    "output_tokens_antes": 1208,
+    "costo_usd_antes": 0.023144,
+    "detalle_vt": [
+      [
+        "virustotal__get_url_report",
+        {
+          "url": "http://www.ml.com/email_terms/"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_url_report",
+        {
+          "url": "http://learn.perl.org/"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "www.ml.com"
+        },
+        "servidor"
+      ],
+      [
+        "virustotal__get_domain_report",
+        {
+          "domain": "learn.perl.org"
+        },
+        "servidor"
+      ]
+    ]
+  }
+]

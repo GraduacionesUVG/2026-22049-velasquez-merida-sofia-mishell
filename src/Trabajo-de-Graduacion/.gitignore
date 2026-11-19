@@ -1,0 +1,51 @@
+# ==========================================================================
+# Datos: NO se versionan. Se regeneran ejecutando el notebook de la Fase 1,
+# que los descarga desde Kaggle y los procesa. Git es para código, no datos.
+# ==========================================================================
+data/*.csv
+data/raw/
+data/interim/
+data/processed/
+
+# Mantener la estructura de carpetas visible en el repo (los .gitkeep sí suben)
+!data/.gitkeep
+!data/**/.gitkeep
+
+# ==========================================================================
+# Caché de Kaggle / kagglehub
+# ==========================================================================
+*.kaggle/
+kagglehub/
+
+# ==========================================================================
+# Conjunto de evaluación externo: no se versiona. phishing_pot/ es un clon
+# git de terceros (con su propio .git/, ~600 MB); eval_external.csv se
+# regenera con experiments/external_eval/build_eval_external.py.
+# ==========================================================================
+experiments/external_eval/phishing_pot/
+experiments/external_eval/eval_external.csv
+
+# ==========================================================================
+# Python
+# ==========================================================================
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# ==========================================================================
+# Jupyter: salidas pesadas (opcional — ver nota abajo)
+# ==========================================================================
+# Si tus notebooks con gráficas embebidas pesan mucho, considera limpiar
+# las salidas antes de commitear. No se ignora el .ipynb en sí.
+
+# ==========================================================================
+# Sistema operativo / editores
+# ==========================================================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
