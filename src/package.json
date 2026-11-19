@@ -1,0 +1,18 @@
+{
+  "name": "phishing-detection-llm-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Prototipo de detección de phishing con LLM y servidores MCP. El código es Python (dependencias en el pyproject.toml de cada componente); este archivo declara la única dependencia de Node.js (servidor MCP de VirusTotal) y atajos para instalar y ejecutar.",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@burtthecoder/mcp-virustotal": "1.0.40"
+  },
+  "scripts": {
+    "setup": "cd knowledge-based-MCP && uv sync && cd ../pattern-archetype-MCP && uv sync && cd ../coherence-analysis-MCP && uv sync && cd ../phishing-detection-orchestrator && uv sync --extra ui --extra analysis --extra dev",
+    "start": "cd phishing-detection-orchestrator && uv run streamlit run experiments/eval_system/orchestrator_ui.py",
+    "test": "cd phishing-detection-orchestrator && uv run pytest"
+  }
+}

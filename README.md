@@ -74,13 +74,13 @@ El detalle completo está en el [informe final](docs/informe_final.pdf).
 - Una **API key de VirusTotal** (opcional; sin ella, el sistema funciona con los otros tres servidores).
 - Conexión a internet la primera vez: se descarga el modelo de embeddings y el paquete npm de VirusTotal.
 
-> **Nota sobre `package.json`:** el proyecto está escrito en Python, así que sus dependencias se declaran en el `pyproject.toml` de cada componente. El único componente de Node.js es el servidor de VirusTotal, que `npx` descarga y ejecuta automáticamente. Por eso no hay `package.json`.
+> **Nota sobre las dependencias:** el proyecto está escrito en Python, así que sus dependencias se declaran en el `pyproject.toml` (con su `uv.lock`) de cada componente. El único componente de Node.js es el servidor MCP de VirusTotal, declarado en [`src/package.json`](src/package.json). Ese archivo también trae atajos (`npm run setup`, `npm start`, `npm test`) que llaman a `uv` por debajo.
 
 ## Estructura del repositorio
 
 ```text
 2026-22049-velasquez-merida-sofia-mishell/
-├── capturas/                          Capturas de pantalla del sistema (captura-01 … captura-10)
+├── capturas/                          Capturas de pantalla del sistema (captura-01 … captura-17)
 ├── demo/
 │   └── demo.mp4                       Video demostrativo
 ├── docs/
@@ -88,6 +88,7 @@ El detalle completo está en el [informe final](docs/informe_final.pdf).
 │   └── consentimiento_firmado.pdf     Consentimiento de uso de foto y video firmado
 ├── src/
 │   ├── .env.example                   Variables de entorno necesarias (sin credenciales)
+│   ├── package.json                   Dependencia de Node.js (VirusTotal MCP) y atajos de instalación/ejecución
 │   ├── phishing-detection-orchestrator/   Cliente orquestador (CLI, modo lote, interfaz Streamlit)
 │   ├── knowledge-based-MCP/           Servidor MCP: base de conocimiento de ingeniería social
 │   ├── pattern-archetype-MCP/         Servidor MCP: arquetipos semánticos (embeddings + K-Means)
@@ -106,6 +107,8 @@ Cada carpeta de `src/` tiene su propio `README.md` con documentación detallada.
    git clone https://github.com/Sofiamishel2003/2026-22049-velasquez-merida-sofia-mishell.git
    cd 2026-22049-velasquez-merida-sofia-mishell/src
    ```
+
+   > **Atajo:** los pasos 2 y 3 equivalen a `npm install && npm run setup` dentro de `src/`. Ese comando también instala el servidor de VirusTotal. Luego sigue en el paso 4.
 
 2. Instalar las dependencias de los tres servidores MCP propios. Cada uno tiene su propio entorno virtual:
 
@@ -150,6 +153,7 @@ Todos los comandos se ejecutan desde `src/phishing-detection-orchestrator/`. No 
 
 ```bash
 uv run streamlit run experiments/eval_system/orchestrator_ui.py
+# o, desde src/:  npm start
 ```
 
 La interfaz tiene dos pestañas:
@@ -171,25 +175,58 @@ La interfaz tiene dos pestañas:
 Cada servidor también tiene sus propias pruebas (`uv run pytest` dentro de su carpeta). Para probar `coherence-analysis-MCP` sin API key, usa `COHERENCE_LLM_PROVIDER="mock"`.
 
 > **Consideraciones:**
+>
 > - Todo análisis real consume tokens de la API de Anthropic.
 > - La primera conexión a `pattern-archetype-MCP` descarga el modelo de embeddings y puede tardar varios minutos.
 > - La capa gratuita de VirusTotal permite 4 consultas por minuto y 500 por día; el orquestador respeta ese límite.
 
 ## Capturas
 
-Las capturas de pantalla del sistema en funcionamiento están en la carpeta [`/capturas`](capturas/):
+Las capturas de pantalla del sistema en funcionamiento están en la carpeta [`/capturas`](capturas/) (17 capturas, en el orden de uso de la interfaz).
 
-| | |
+### Análisis en vivo de un correo nuevo
+
+| # | Pantalla |
 | --- | --- |
-| ![Captura 1](capturas/captura-01.png) | ![Captura 2](capturas/captura-02.png) |
-| ![Captura 3](capturas/captura-03.png) | ![Captura 4](capturas/captura-04.png) |
-| ![Captura 5](capturas/captura-05.png) | ![Captura 6](capturas/captura-06.png) |
-| ![Captura 7](capturas/captura-07.png) | ![Captura 8](capturas/captura-08.png) |
-| ![Captura 9](capturas/captura-09.png) | ![Captura 10](capturas/captura-10.png) |
+| [01](capturas/captura-01.png) | Los cuatro servidores MCP (`knowledge`, `archetype`, `coherence` y `virustotal`) conectados, con su comando y sus herramientas. |
+| [02](capturas/captura-02.png) | Formulario de análisis: modo (explicación o veredicto), servidores a usar, remitente, asunto y cuerpo de un correo de prueba. |
+| [03](capturas/captura-03.png) | Veredicto **PHISHING** con riesgo de 0.95 y la explicación del sistema en lenguaje claro. |
+| [04](capturas/captura-04.png) | Evidencia del servidor de arquetipos: arquetipo 13, emoción dominante y táctica de ingeniería social. |
+| [05](capturas/captura-05.png) | Evidencia del servidor de coherencia: cinco incoherencias internas, cada una con la cita del correo. |
+| [06](capturas/captura-06.png) | Evidencia del servidor de conocimiento: tácticas de urgencia y miedo, con referencias académicas. |
+| [07](capturas/captura-07.png) | Evidencia de VirusTotal: la IP y el dominio del correo. |
+
+| | | |
+| --- | --- | --- |
+| ![Captura 1](capturas/captura-01.png) | ![Captura 2](capturas/captura-02.png) | ![Captura 3](capturas/captura-03.png) |
+| ![Captura 4](capturas/captura-04.png) | ![Captura 5](capturas/captura-05.png) | ![Captura 6](capturas/captura-06.png) |
+| ![Captura 7](capturas/captura-07.png) | | |
+
+### Correos de la evaluación final
+
+| # | Pantalla |
+| --- | --- |
+| [08](capturas/captura-08.png) | Lista de los 1,000 correos evaluados (935 aciertos), con filtros, y un correo legítimo bien clasificado. |
+| [09](capturas/captura-09.png) | Explicación y evidencia del correo legítimo: baja similitud con los arquetipos y enlaces limpios. |
+| [10](capturas/captura-10.png) | Un correo de phishing real (suplantación de Microsoft) detectado con riesgo de 0.95. |
+| [11](capturas/captura-11.png) | Explicación del sistema para ese correo, que combina la evidencia de los cuatro servidores. |
+| [12](capturas/captura-12.png) | Evidencia del servidor de arquetipos. |
+| [13](capturas/captura-13.png) | Evidencia del servidor de coherencia, incluido el texto basura usado para evadir filtros. |
+| [14](capturas/captura-14.png) | Evidencia del servidor de conocimiento. |
+| [15](capturas/captura-15.png) | Evidencia de VirusTotal: detecciones del dominio y reputación de la IP. |
+| [16](capturas/captura-16.png) | El correo original analizado. |
+| [17](capturas/captura-17.png) | Detalles técnicos: tiempo de análisis y las 9 herramientas MCP que invocó el orquestador, en orden. |
+
+| | | |
+| --- | --- | --- |
+| ![Captura 8](capturas/captura-08.png) | ![Captura 9](capturas/captura-09.png) | ![Captura 10](capturas/captura-10.png) |
+| ![Captura 11](capturas/captura-11.png) | ![Captura 12](capturas/captura-12.png) | ![Captura 13](capturas/captura-13.png) |
+| ![Captura 14](capturas/captura-14.png) | ![Captura 15](capturas/captura-15.png) | ![Captura 16](capturas/captura-16.png) |
+| ![Captura 17](capturas/captura-17.png) | | |
 
 ## Demo
 
-El video demostrativo del proyecto se encuentra en [`/demo/demo.mp4`](demo/demo.mp4).
+El video demostrativo del proyecto (MP4 H.264, 1280×720, con audio, 5:38 min) se encuentra en [`/demo/demo.mp4`](demo/demo.mp4).
 
 ## Documentación
 
