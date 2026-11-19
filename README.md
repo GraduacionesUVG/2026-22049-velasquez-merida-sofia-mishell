@@ -108,15 +108,17 @@ Cada carpeta de `src/` tiene su propio `README.md` con documentación detallada.
    cd 2026-22049-velasquez-merida-sofia-mishell/src
    ```
 
-   > **Atajo:** los pasos 2 y 3 equivalen a `npm install && npm run setup` dentro de `src/`. Ese comando también instala el servidor de VirusTotal. Luego sigue en el paso 4.
+   > **Atajo:** los pasos 2 y 3 equivalen a ejecutar `npm install` y luego `npm run setup` dentro de `src/`. Así también se instala el servidor de VirusTotal. Luego sigue en el paso 4.
 
 2. Instalar las dependencias de los tres servidores MCP propios. Cada uno tiene su propio entorno virtual:
 
    ```bash
-   cd knowledge-based-MCP    && uv sync && cd ..
-   cd pattern-archetype-MCP  && uv sync && cd ..
-   cd coherence-analysis-MCP && uv sync && cd ..
+   uv sync --project knowledge-based-MCP
+   uv sync --project pattern-archetype-MCP
+   uv sync --project coherence-analysis-MCP
    ```
+
+   Estos comandos funcionan igual en PowerShell, cmd y bash. Cada entorno virtual se crea dentro de la carpeta de su proyecto.
 
    Los arquetipos ya vienen precalculados en `pattern-archetype-MCP/artifacts/`, así que no hace falta regenerarlos.
 
@@ -241,4 +243,6 @@ Asesor: Ing. Mba. Juan Carlos Canteo
 
 ## Licencia
 
-Proyecto desarrollado con fines académicos como Trabajo de Graduación de la Universidad del Valle de Guatemala. Todos los derechos reservados por la autora.
+Este proyecto se distribuye bajo la licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+
+Desarrollado como Trabajo de Graduación de la Universidad del Valle de Guatemala.
